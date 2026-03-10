@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FutFem - Centro de Información</title>
+    <meta name="description" content="Todo lo que necesitas saber sobre el fútbol femenino en un solo lugar.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">FUTFEM</div>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#explorar">Explorar</a></li>
+                <li><a href="#torneos">Torneos</a></li>
+            </ul>
+        </nav>
+        <a href="#unete" class="cta-button"
+            style="padding: 0.5rem 1.5rem; font-size: 0.9rem; animation: none;">Únete</a>
+    </header>
+
+    <main>
+        <section id="inicio" class="hero">
+            <h1>INFO <span>FUTFEM.</span></h1>
+            <p>Tu portal interactivo para descubrir la grandeza, historia e impacto del fútbol femenino mundial.</p>
+            <a href="#explorar" class="cta-button">Empezar a Explorar</a>
+        </section>
+
+        <section id="explorar">
+            <h2 class="section-title">¿Qué quieres <span>conocer?</span></h2>
+
+            <div class="filter-container">
+                <button class="filter-btn active" data-category="historia">Historia</button>
+                <button class="filter-btn" data-category="ligas">Ligas Top</button>
+                <button class="filter-btn" data-category="iconos">Iconos</button>
+                <button class="filter-btn" data-category="impacto">Impacto</button>
+            </div>
+
+            <div id="info-display" class="info-content-area">
+                <!-- Se cargará por JS -->
+            </div>
+        </section>
+
+        <section id="jugadoras">
+            <h2 class="section-title">Grandes <span>Protagonistas</span></h2>
+            <p style="text-align: center; color: var(--text-muted); margin-top: -3rem; margin-bottom: 3rem;">Las
+                jugadoras que están haciendo historia en el campo.</p>
+            <div class="grid" id="players-grid">
+                <!-- JavaScript will populate this -->
+            </div>
+        </section>
+
+
+        <section id="torneos" style="background: var(--surface);">
+            <h2 class="section-title">Grandes <span>Escenarios</span></h2>
+            <div class="grid">
+                <div class="card">
+                    <div class="card-img"
+                        style="background-image: url('https://images.unsplash.com/photo-1574629810360-7efbbe195018?auto=format&fit=crop&q=80&w=800');">
+                    </div>
+                    <div class="card-content">
+                        <h3>Copa del Mundo</h3>
+                        <p>El evento máximo donde las naciones luchan por la gloria eterna.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-img"
+                        style="background-image: url('https://images.unsplash.com/photo-1508098682722-e99c43a406b2?auto=format&fit=crop&q=80&w=800');">
+                    </div>
+                    <div class="card-content">
+                        <h3>Champions League</h3>
+                        <p>Los mejores clubes de Europa en una batalla táctica sin precedentes.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="unete" style="text-align: center;">
+            <h2 class="section-title">Newsletter <span>FutFem</span></h2>
+            <form id="newsletter-form"
+                style="display: flex; gap: 1rem; max-width: 500px; margin: 0 auto; justify-content: center;">
+                <input type="email" placeholder="Tu correo electrónico" required
+                    style="padding: 1rem 1.5rem; border-radius: 50px; border: 1px solid var(--border); background: var(--surface); color: white; flex: 1; outline: none;">
+                <button type="submit" class="cta-button" style="border: none; cursor: pointer;">Suscribirse</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 FutFem. Innovación y Pasión. <br>Página informativa optimizada para fans.</p>
+    </footer>
+
+    <!-- Chatbot UI -->
+    <div id="chatbot-trigger" class="chat-bubble">
+        <span class="chat-icon">⚽</span>
+    </div>
+
+    <div id="chat-window" class="chat-window hidden">
+        <div class="chat-header">
+            <h3>Asistente FutFem</h3>
+            <button id="close-chat">&times;</button>
+        </div>
+        <div id="chat-messages" class="chat-messages">
+            <div class="message bot">¡Hola! Soy tu asistente de FutFem. ¿En qué puedo ayudarte hoy? Puedes preguntarme
+                sobre la <b>historia</b>, las <b>ligas</b> o las <b>jugadoras</b>.</div>
+        </div>
+        <form id="chat-input-form" class="chat-input-form">
+            <input type="text" id="chat-input" placeholder="Escribe un mensaje..." autocomplete="off">
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
